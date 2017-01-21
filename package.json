@@ -1,0 +1,23 @@
+{
+  "name": "prestame",
+  "version": "1.0.0",
+  "description": "personal loan management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpolanco14/Prestame.git"
+  },
+  "keywords": [
+    "loan",
+    "prestamos"
+  ],
+  "author": "delcio polanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpolanco14/Prestame/issues"
+  },
+  "homepage": "https://github.com/dpolanco14/Prestame#readme"
+}
