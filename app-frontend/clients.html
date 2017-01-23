@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Gestion de Prestamos | Prestame</title>
+    <!-- vendors css -->
+    <link href="css/vendors.min.css" rel="stylesheet">
+    <!-- app css -->
+    <link href="css/app.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-bank"></i> 
+                            <span>Prestame</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="img/img.jpg" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Bienvenido,</span>
+                            <h2>Delcio Polanco</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Menu</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="clients.html"><i class="fa fa-users"></i> Clientes <span class=""></span></a>
+                                </li>
+                                <li>
+                                    <a href="loans.html"><i class="fa fa-handshake-o"></i> Prestamos <span class=""></span></a>
+                                </li>
+                                <li>
+                                    <a href="history.html"><i class="fa fa-list-alt"></i> Historico <span class=""></span></a>
+                                </li>
+                                <li>
+                                    <a href="pendings.html"><i class="fa fa-list-ul"></i> Pendientes <span class=""></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>Configuración</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-user-o"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="index.html">Permisos</a></li>
+                                        <li><a href="index2.html">Listado</a></li>
+                                        <li><a href="index3.html">Nuevo usuario</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a><i class="fa fa-wrench"></i> Panel de Control <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="form.html">Perfil</a></li>
+                                        <li><a href="form_advanced.html">Preferencias</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class=" fa fa-power-off red"></span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/img.jpg" alt="">Delcio Polanco
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li>
+                                        <a href="javascript:;"> <i class="fa fa-user pull-right"></i>Perfil</a>
+                                    </li>
+                                    <li><a href="javascript:;"><i class="fa fa-info  pull-right"></i>Ayuda</a></li>
+                                    <li><a href="help.html"><i class="fa fa-power-off red pull-right"></i> Log Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div class="clients">
+                    <div class="col-lg-3 col-md-5 col-sm-5 col-xs-12 form-group pull-lefth">
+                        <h3 style="margin:0 10px 10px">Clientes</h3>
+                    </div>
+                    <div class="title_right">
+                        <div class="col-lg-3 col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ejem: Juan Perez...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Buscar</button>
+                             </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="table-responsive ">
+                            <table class="table table-striped jambo_table ">
+                                <thead>
+                                    <tr class="headings selected">
+                                        <th>
+                                            <div class="icheckbox_flat-green checked" style="position: relative;"><input type="checkbox" id="check-all" class="flat" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </th>
+                                        <th class="column-title" style="display: table-cell;">Invoice </th>
+                                        <th class="column-title" style="display: table-cell;">Invoice Date </th>
+                                        <th class="column-title" style="display: table-cell;">Order </th>
+                                        <th class="column-title" style="display: table-cell;">Bill to Name </th>
+                                        <th class="column-title" style="display: table-cell;">Status </th>
+                                        <th class="column-title" style="display: table-cell;">Amount </th>
+                                        <th class="column-title no-link last" style="display: table-cell;"><span class="nobr">Action</span>
+                                        </th>
+                                        <th class="bulk-actions" colspan="7" style="display: none;">
+                                            <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt">1 Records Selected</span> ) <i class="fa fa-chevron-down"></i></a>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="even pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000040</td>
+                                        <td class=" ">May 23, 2014 11:47:56 PM </td>
+                                        <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+                                        <td class=" ">John Blank L</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$7.45</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000039</td>
+                                        <td class=" ">May 23, 2014 11:30:12 PM</td>
+                                        <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                                        </td>
+                                        <td class=" ">John Blank L</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$741.20</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000038</td>
+                                        <td class=" ">May 24, 2014 10:55:33 PM</td>
+                                        <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                                        </td>
+                                        <td class=" ">Mike Smith</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$432.26</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000037</td>
+                                        <td class=" ">May 24, 2014 10:52:44 PM</td>
+                                        <td class=" ">121000204</td>
+                                        <td class=" ">Mike Smith</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$333.21</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000040</td>
+                                        <td class=" ">May 24, 2014 11:47:56 PM </td>
+                                        <td class=" ">121000210</td>
+                                        <td class=" ">John Blank L</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$7.45</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000039</td>
+                                        <td class=" ">May 26, 2014 11:30:12 PM</td>
+                                        <td class=" ">121000208 <i class="error fa fa-long-arrow-down"></i>
+                                        </td>
+                                        <td class=" ">John Blank L</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$741.20</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000038</td>
+                                        <td class=" ">May 26, 2014 10:55:33 PM</td>
+                                        <td class=" ">121000203</td>
+                                        <td class=" ">Mike Smith</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$432.26</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000037</td>
+                                        <td class=" ">May 26, 2014 10:52:44 PM</td>
+                                        <td class=" ">121000204</td>
+                                        <td class=" ">Mike Smith</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$333.21</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000040</td>
+                                        <td class=" ">May 27, 2014 11:47:56 PM </td>
+                                        <td class=" ">121000210</td>
+                                        <td class=" ">John Blank L</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$7.45</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                        <td class="a-center ">
+                                            <div class="icheckbox_flat-green" style="position: relative;"><input type="checkbox" class="flat" name="table_records" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                        </td>
+                                        <td class=" ">121000039</td>
+                                        <td class=" ">May 28, 2014 11:30:12 PM</td>
+                                        <td class=" ">121000208</td>
+                                        <td class=" ">John Blank L</td>
+                                        <td class=" ">Paid</td>
+                                        <td class="a-right a-right ">$741.20</td>
+                                        <td class=" last"><a href="#">View</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+    <!-- Vendors Scripts -->
+    <script src="js/vendors.min.js"></script>
+    <!-- App Scripts -->
+    <script src="js/app.min.js"></script>
+    <script type="text/javascript">
+        // Sidebar
+        $(document).ready(function () {
+            var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
+                $BODY = $('body'),
+                $MENU_TOGGLE = $('#menu_toggle'),
+                $SIDEBAR_MENU = $('#sidebar-menu'),
+                $SIDEBAR_FOOTER = $('.sidebar-footer'),
+                $LEFT_COL = $('.left_col'),
+                $RIGHT_COL = $('.right_col'),
+                $NAV_MENU = $('.nav_menu'),
+                $FOOTER = $('footer'),
+                $dropdownProfileMenu = $('.user-profile');
+
+            $dropdownProfileMenu.on('click', function () {
+                var $li = $(this).parent();
+                $li.toggleClass('open');
+            });
+            // TODO: This is some kind of easy fix, maybe we can improve this
+            var setContentHeight = function () {
+                // reset height
+                $RIGHT_COL.css('min-height', $(window).height());
+
+                var bodyHeight = $BODY.outerHeight(),
+                    footerHeight = $BODY.hasClass('footer_fixed') ? -10 : $FOOTER.height(),
+                    leftColHeight = $LEFT_COL.eq(1).height() + $SIDEBAR_FOOTER.height(),
+                    contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
+
+                // normalize content
+                contentHeight -= $NAV_MENU.height() + footerHeight;
+
+                $RIGHT_COL.css('min-height', contentHeight);
+            };
+
+            $SIDEBAR_MENU.find('a').on('click', function (ev) {
+                var $li = $(this).parent();
+
+                if ($li.is('.active')) {
+                    $li.removeClass('active active-sm');
+                    $('ul:first', $li).slideUp(function () {
+                        setContentHeight();
+                    });
+                } else {
+                    // prevent closing menu if we are on child menu
+                    if (!$li.parent().is('.child_menu')) {
+                        $SIDEBAR_MENU.find('li').removeClass('active active-sm');
+                        $SIDEBAR_MENU.find('li ul').slideUp();
+                    }
+
+                    $li.addClass('active');
+
+                    $('ul:first', $li).slideDown(function () {
+                        setContentHeight();
+                    });
+                }
+            });
+
+            // toggle small or large menu
+            $MENU_TOGGLE.on('click', function () {
+                if ($BODY.hasClass('nav-md')) {
+                    $SIDEBAR_MENU.find('li.active ul').hide();
+                    $SIDEBAR_MENU.find('li.active').addClass('active-sm').removeClass('active');
+                } else {
+                    $SIDEBAR_MENU.find('li.active-sm ul').show();
+                    $SIDEBAR_MENU.find('li.active-sm').addClass('active').removeClass('active-sm');
+                }
+
+                $BODY.toggleClass('nav-md nav-sm');
+
+                setContentHeight();
+            });
+
+            // check active menu
+            $SIDEBAR_MENU.find('a[href="' + CURRENT_URL + '"]').parent('li').addClass('current-page');
+
+            $SIDEBAR_MENU.find('a').filter(function () {
+                return this.href == CURRENT_URL;
+            }).parent('li').addClass('current-page').parents('ul').slideDown(function () {
+                setContentHeight();
+            }).parent().addClass('active');
+
+            // recompute content when resizing
+            $(window).resize(function () {
+                setContentHeight();
+            });
+
+            setContentHeight();
+
+            // fixed sidebar
+            if ($.fn.mCustomScrollbar) {
+                $('.menu_fixed').mCustomScrollbar({
+                    autoHideScrollbar: true,
+                    theme: 'minimal',
+                    mouseWheel: {
+                        preventDefault: true
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

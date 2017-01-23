@@ -1,0 +1,8 @@
+node_modules/
+app-frontend/public/css/
+app-frontend/public/fonts/
+app-frontend/public/vendors/
+bower_components/
+deploy/
+.vscode
+.sass-cache
