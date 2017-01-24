@@ -106,10 +106,7 @@ gulp.task('vendors', function () {
             config.frontSrcLibs + '/jquery/*.js',
             config.frontSrcLibs + '/underscore/*.js',
             config.frontSrcLibs + '/backbone/*.js',
-            config.frontSrcLibs + '/backbone.validation/*.js',
-            config.frontSrcLibs + '/backbone.stickit/*.js',
-            config.frontSrcLibs + '/backbone-fetch-cache/*.js',
-            config.frontSrcLibs + '/boostrap/*.js'
+            config.frontSrcLibs + '/**/*.js'
 
         ])
         .pipe(concat('vendors.js'))
